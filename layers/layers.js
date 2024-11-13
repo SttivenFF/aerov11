@@ -1,14 +1,14 @@
 var wms_layers = [];
 
 
-        var lyr_ESRIGraylight_0 = new ol.layer.Tile({
-            'title': 'ESRI Gray (light)',
+        var lyr_ESRINationalGeographic_0 = new ol.layer.Tile({
+            'title': 'ESRI National Geographic',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
             attributions: ' ',
-                url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+                url: 'https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}'
             })
         });
 var format_ne_10m_airports_1 = new ol.format.GeoJSON();
@@ -30,8 +30,8 @@ var lyr_ne_10m_airports_1 = new ol.layer.Vector({
     <img src="styles/legend/ne_10m_airports_1_2.png" /> small<br />'
         });
 
-lyr_ESRIGraylight_0.setVisible(true);lyr_ne_10m_airports_1.setVisible(true);
-var layersList = [lyr_ESRIGraylight_0,lyr_ne_10m_airports_1];
+lyr_ESRINationalGeographic_0.setVisible(true);lyr_ne_10m_airports_1.setVisible(true);
+var layersList = [lyr_ESRINationalGeographic_0,lyr_ne_10m_airports_1];
 lyr_ne_10m_airports_1.set('fieldAliases', {'scalerank': 'scalerank', 'featurecla': 'featurecla', 'type': 'type', 'name': 'name', 'abbrev': 'abbrev', 'location': 'location', 'gps_code': 'gps_code', 'iata_code': 'iata_code', 'wikipedia': 'wikipedia', 'natlscale': 'natlscale', });
 lyr_ne_10m_airports_1.set('fieldImages', {'scalerank': 'Hidden', 'featurecla': 'Hidden', 'type': 'TextEdit', 'name': 'TextEdit', 'abbrev': 'Hidden', 'location': 'Hidden', 'gps_code': 'Hidden', 'iata_code': 'TextEdit', 'wikipedia': 'TextEdit', 'natlscale': 'Hidden', });
 lyr_ne_10m_airports_1.set('fieldLabels', {'type': 'inline label - always visible', 'name': 'inline label - always visible', 'iata_code': 'inline label - always visible', 'wikipedia': 'inline label - always visible', });
